@@ -70,7 +70,7 @@ const ALL_LINKS: SocialLink[] = [
   {
     name: "Facebook",
     icon: Facebook,
-    url: "https://facebook.com/bgytalondos",
+    url: "https://www.facebook.com/p/Barangay-Talon-Uno-61589355265514/",
     color: "bg-[#1877F2] hover:brightness-110", // Facebook blue
     external: true,
   },
@@ -86,7 +86,7 @@ const ALL_LINKS: SocialLink[] = [
   {
     name: "Messenger",
     icon: MessengerIcon,
-    url: "https://m.me/bgytalondos",
+    url: "",
     color: "bg-transparent", // icon draws its own gradient
     external: true,
   },
@@ -100,14 +100,14 @@ const ALL_LINKS: SocialLink[] = [
   {
     name: "Email",
     icon: Mail,
-    url: "mailto:barangaytalondos@gmail.com",
+    url: "mailto:",
     color: "bg-[#EA4335] hover:brightness-110", // Gmail red
     external: false,
   },
   {
     name: "Phone",
     icon: Phone,
-    url: "tel:288711048",
+    url: "tel:09622173021",
     color: "bg-[#34A853] hover:brightness-110", // classic call green
     external: false,
   },
