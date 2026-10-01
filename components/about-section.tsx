@@ -2,39 +2,44 @@
 
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Users, Home, CalendarDays, Award, X, ZoomIn } from "lucide-react";
+import { Users, Home, MapPin, Award, X, ZoomIn } from "lucide-react";
 
 export default function AboutSection() {
   const [isImageModalOpen, setIsImageModalOpen] = React.useState(false);
 
+  // Sources: PSA 2020 Census (population) and 2015 Census (households),
+  // via PhilAtlas / PSA. Officials count follows the Local Government Code
+  // structure: 1 Punong Barangay + 7 Kagawads + 1 SK Chairperson (elected)
+  // + Barangay Secretary + Barangay Treasurer (appointed).
   const stats = [
     {
       icon: Users,
-      number: "44,000+",
-      label: "Proud Residents",
+      number: "42,000+",
+      label: "Residents (2020 Census)",
     },
     {
       icon: Home,
-      number: "13,000+",
-      label: "Households",
+      number: "8,600+",
+      label: "Households (2015 Census)",
     },
     {
-      icon: CalendarDays,
-      number: "1978",
-      label: "Barangay Founded",
+      icon: MapPin,
+      number: "1 of 20",
+      label: "Barangays in Las Piñas City",
     },
     {
       icon: Award,
       number: "11",
-      label: "Barangay Officials",
+      label: "Barangay Officials & Staff",
     },
   ];
 
+  // Based on the services available in the Talon Uno online system
   const highlights = [
-    "Delivering efficient and responsive barangay services",
-    "Fostering unity through community events and festivals",
-    "Championing environmental sustainability initiatives",
-    "Empowering residents through livelihood and skills programs",
+    "Request barangay clearance, residency, indigency, and good moral certificates online",
+    "Apply for cedula, business and building permits, and marriage licenses",
+    "Get help with health certificates, medical assistance, and ambulance requests",
+    "Report community issues, file a barangay blotter, and read the latest news and announcements",
   ];
 
   return (
@@ -102,19 +107,19 @@ export default function AboutSection() {
             <div className="w-20 h-1.5 bg-yellow-400 rounded-full mb-6" />
 
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              Nestled in the City of Las Piñas, Metro Manila, Barangay Talon
-              Tres was created on April 3, 1978 under Presidential Decree No.
-              1335, formed when the subdivisions of BF Resort, Sta. Cecilia,
-              Sarino, Mother Earth, Camela, and San Beda were detached from the
-              original Barangay Talon. Today it is home to over 44,000
-              residents, making it one of the most populous barangays in the
-              city.
+              Barangay Talon Uno is one of the 20 barangays of Las Piñas City,
+              Metro Manila. It is part of the historic Talon area, now divided
+              into five barangays: Talon Uno, Talon Dos, Talon Tres, Talon
+              Kuatro, and Talon Singko. According to the 2020 Census, Talon Uno
+              is home to 42,505 residents, about 7% of the city&apos;s
+              population, and its population grew by around 22% from 2015.
             </p>
 
             <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-              Our barangay is more than just a place—it's a home where families
-              grow, businesses flourish, and every voice matters. We take pride
-              in:
+              Talon Uno Connect brings barangay services closer to every
+              resident, so you can request documents, ask for assistance, and
+              raise concerns without having to line up at the barangay hall.
+              Through this platform, you can:
             </p>
 
             <ul className="space-y-4">
@@ -172,8 +177,8 @@ export default function AboutSection() {
             </h3>
 
             <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-              Dedicated leaders and staff working together to serve Barangay
-              Talon Uno
+              Your Punong Barangay, Kagawads, SK Chairperson, and staff, working
+              together to serve Barangay Talon Uno
             </p>
           </div>
 
@@ -183,11 +188,10 @@ export default function AboutSection() {
             className="relative rounded-3xl overflow-hidden shadow-2xl group cursor-pointer"
             onClick={() => setIsImageModalOpen(true)}
           >
-            {/* Placeholder for team image - replace with actual image */}
             <div className="aspect-[21/9] bg-[#eaf0fb] relative">
               <img
                 src="/our-team2.jpg"
-                alt="Barangay Talon Uno Team"
+                alt="Barangay Talon Uno Officials and Staff"
                 className="w-full h-full object-cover"
               />
 
@@ -212,10 +216,10 @@ export default function AboutSection() {
               className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/80 to-transparent"
             >
               <h4 className="text-2xl md:text-3xl font-bold text-white mb-2">
-                Barangay Officials & Staff 2023–2026
+                Barangay Talon Uno Officials & Staff 2023–2026
               </h4>
               <p className="text-white/90 text-lg">
-                Together, building a stronger community for all
+                Serving the residents of Talon Uno, Las Piñas City
               </p>
             </motion.div>
           </motion.div>
@@ -230,17 +234,26 @@ export default function AboutSection() {
             <div className="text-center p-6 rounded-2xl bg-white shadow-lg border border-slate-100">
               <div className="text-3xl font-bold text-[#1e40af] mb-2">9</div>
               <div className="text-gray-700 font-medium">Elected Officials</div>
+              <div className="text-sm text-gray-500 mt-1">
+                Punong Barangay, 7 Kagawads, SK Chairperson
+              </div>
             </div>
 
             <div className="text-center p-6 rounded-2xl bg-white shadow-lg border border-slate-100">
               <div className="text-3xl font-bold text-[#1e40af] mb-2">2</div>
               <div className="text-gray-700 font-medium">Appointive Staff</div>
+              <div className="text-sm text-gray-500 mt-1">
+                Barangay Secretary and Barangay Treasurer
+              </div>
             </div>
 
             <div className="text-center p-6 rounded-2xl bg-white shadow-lg border border-slate-100">
-              <div className="text-3xl font-bold text-[#1e40af] mb-2">24/7</div>
+              <div className="text-3xl font-bold text-[#1e40af] mb-2">11</div>
               <div className="text-gray-700 font-medium">
-                Service Commitment
+                Officials & Staff in Total
+              </div>
+              <div className="text-sm text-gray-500 mt-1">
+                Serving Talon Uno, Las Piñas City
               </div>
             </div>
           </motion.div>
@@ -280,17 +293,17 @@ export default function AboutSection() {
             >
               <img
                 src="/our-team2.jpg"
-                alt="Barangay Talon Uno Team - Full View"
+                alt="Barangay Talon Uno Officials and Staff - Full View"
                 className="w-full h-full object-contain rounded-2xl shadow-2xl"
               />
 
               {/* Image caption */}
               <div className="mt-6 text-center">
                 <h4 className="text-2xl md:text-3xl font-bold text-white mb-2">
-                  Barangay Officials & Staff 2023–2026
+                  Barangay Talon Uno Officials & Staff 2023–2026
                 </h4>
                 <p className="text-white/80 text-lg">
-                  Together, building a stronger community for all
+                  Serving the residents of Talon Uno, Las Piñas City
                 </p>
               </div>
             </motion.div>

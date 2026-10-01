@@ -105,19 +105,19 @@ export default function ServiceWorkerProvider() {
       onClick={handleDismiss}
     >
       <div
-        className="w-full max-w-sm bg-gradient-to-r from-red-700 to-blue-900 text-white rounded-xl shadow-2xl p-5 border border-yellow-400 animate-in zoom-in-95 duration-200"
+        className="w-full max-w-sm bg-gradient-to-br from-blue-900 to-blue-950 text-white rounded-xl shadow-2xl p-5 border border-yellow-400 animate-in zoom-in-95 duration-200"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex items-start justify-between mb-2">
           <div className="flex items-center gap-3">
-            <div className="bg-white/20 p-2 rounded-lg flex-shrink-0">
+            <div className="bg-yellow-400 text-blue-950 p-2 rounded-lg flex-shrink-0">
               <Download className="h-5 w-5" />
             </div>
             <div>
               <h3 className="font-bold text-lg leading-tight">
                 Install Talon Uno App
               </h3>
-              <p className="text-sm text-blue-50 mt-0.5">
+              <p className="text-sm text-blue-100 mt-0.5">
                 Get quick access to services
               </p>
             </div>
@@ -132,8 +132,8 @@ export default function ServiceWorkerProvider() {
         </div>
 
         {isIOS ? (
-          <div className="mt-3 text-sm text-blue-50 space-y-2">
-            <p className="font-semibold">To install on iOS:</p>
+          <div className="mt-3 text-sm text-blue-100 space-y-2">
+            <p className="font-semibold text-white">To install on iOS:</p>
             <ol className="list-decimal list-inside space-y-1 ml-2">
               <li>Tap the Share button (square with arrow)</li>
               <li>Scroll down and tap "Add to Home Screen"</li>
@@ -141,7 +141,7 @@ export default function ServiceWorkerProvider() {
             </ol>
             <Button
               onClick={handleDismiss}
-              className="w-full mt-3 bg-white text-blue-700 hover:bg-yellow-50 font-semibold"
+              className="w-full mt-3 bg-yellow-400 text-blue-950 hover:bg-yellow-300 font-semibold"
             >
               Got it
             </Button>
@@ -149,7 +149,7 @@ export default function ServiceWorkerProvider() {
         ) : (
           <Button
             onClick={handleInstallClick}
-            className="w-full mt-3 bg-white text-blue-700 hover:bg-yellow-50 font-semibold"
+            className="w-full mt-3 bg-yellow-400 text-blue-950 hover:bg-yellow-300 font-semibold"
           >
             Install Now
           </Button>
